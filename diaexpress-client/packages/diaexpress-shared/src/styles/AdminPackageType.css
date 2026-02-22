@@ -1,0 +1,110 @@
+.admin-package-type {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-package-type h2,
+.admin-package-type h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.admin-package-type form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-package-type input,
+.admin-package-type textarea,
+.admin-package-type select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.admin-package-type textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  background: #eef2f7;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.admin-package-type button {
+  padding: 0.6rem 1.2rem;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-package-type button:hover {
+  background: #005fa3;
+}
+
+.admin-package-type ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.admin-package-type li {
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.admin-package-type li button {
+  margin-right: 0.5rem;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.admin-package-type li button:hover {
+  background: #ddd;
+}
+
+.admin-package-type li strong {
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.admin-package-type li small {
+  display: block;
+  margin-top: 0.2rem;
+  color: #666;
+  font-size: 0.9rem;
+}

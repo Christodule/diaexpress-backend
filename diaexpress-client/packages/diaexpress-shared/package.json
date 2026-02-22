@@ -1,0 +1,26 @@
+{
+  "name": "@diaexpress/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "react-hook-form": "^7.49.2",
+    "zod": "^3.22.4"
+  },
+  "exports": {
+    "./abis/*": "./src/abis/*",
+    "./api/*": "./src/api/*",
+    "./auth/*": "./src/auth/*",
+    "./components/*": "./src/components/*",
+    "./constants/*": "./src/constants/*",
+    "./context/*": "./src/context/*",
+    "./pages/*": "./src/pages/*",
+    "./styles/*": "./src/styles/*",
+    "./utils/*": "./src/utils/*",
+    "./views/*": "./src/views/*"
+  },
+  "peerDependencies": {
+    "@clerk/clerk-react": "^5.51.0",
+    "@clerk/nextjs": "^6.33.3"
+  }
+}

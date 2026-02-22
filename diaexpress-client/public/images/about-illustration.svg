@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="sea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f78ff" />
+      <stop offset="100%" stop-color="#0f4b9b" />
+    </linearGradient>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dff2ff" />
+      <stop offset="100%" stop-color="#99c4ff" />
+    </linearGradient>
+    <linearGradient id="ship" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#133c7e" />
+      <stop offset="100%" stop-color="#0a2b5b" />
+    </linearGradient>
+    <linearGradient id="containerBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c7cf1" />
+      <stop offset="100%" stop-color="#155dbe" />
+    </linearGradient>
+    <linearGradient id="containerOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff9a3d" />
+      <stop offset="100%" stop-color="#f36a16" />
+    </linearGradient>
+    <linearGradient id="containerGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1fb59a" />
+      <stop offset="100%" stop-color="#0d7c6b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#sky)" />
+  <rect y="420" width="800" height="200" fill="url(#sea)" />
+  <g transform="translate(100, 320)">
+    <rect x="0" y="90" width="520" height="60" fill="#0a2b5b" />
+    <rect x="50" y="40" width="420" height="70" rx="8" fill="url(#ship)" />
+    <rect x="80" y="-20" width="90" height="60" rx="8" fill="url(#containerBlue)" />
+    <rect x="180" y="-30" width="90" height="70" rx="8" fill="url(#containerOrange)" />
+    <rect x="280" y="-10" width="90" height="50" rx="8" fill="url(#containerGreen)" />
+    <rect x="380" y="-25" width="90" height="65" rx="8" fill="url(#containerBlue)" />
+    <rect x="140" y="-70" width="90" height="50" rx="8" fill="url(#containerGreen)" />
+    <rect x="340" y="-60" width="90" height="55" rx="8" fill="url(#containerOrange)" />
+  </g>
+  <g opacity="0.65">
+    <ellipse cx="120" cy="150" rx="60" ry="18" fill="#ffffff" />
+    <ellipse cx="220" cy="120" rx="48" ry="15" fill="#ffffff" />
+    <ellipse cx="520" cy="140" rx="52" ry="18" fill="#ffffff" />
+    <ellipse cx="620" cy="110" rx="68" ry="20" fill="#ffffff" />
+  </g>
+</svg>

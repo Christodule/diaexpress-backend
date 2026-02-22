@@ -1,0 +1,240 @@
+.track-shipment-page {
+  padding-top: var(--dx-spacing-sm);
+}
+
+.track-shipment__layout {
+  align-items: flex-start;
+}
+
+.track-shipment__search-card,
+.track-shipment__details-card {
+  gap: var(--dx-spacing-md);
+}
+
+.track-shipment__card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dx-text-primary);
+}
+
+.track-shipment__form {
+  display: grid;
+  gap: var(--dx-spacing-sm);
+}
+
+.track-shipment__input-error {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: #b91c1c;
+}
+
+.track-shipment__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.track-shipment__alert {
+  padding: 0.8rem 1rem;
+  border-radius: var(--dx-radius-md);
+  border: 1px solid var(--dx-color-border);
+  background: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.track-shipment__alert--error {
+  background: var(--dx-error-surface);
+  border-color: rgba(153, 27, 27, 0.2);
+  color: #991b1b;
+}
+
+.track-shipment__details-card {
+  position: sticky;
+  top: var(--dx-spacing-sm);
+  align-self: flex-start;
+}
+
+@media (max-width: 960px) {
+  .track-shipment__details-card {
+    position: static;
+  }
+}
+
+.track-shipment__status-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--dx-spacing-sm);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.track-shipment__status-badge {
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
+
+.track-shipment__code-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(12, 31, 67, 0.6);
+  font-weight: 600;
+}
+
+.track-shipment__code {
+  margin: 0.2rem 0 0.35rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--dx-text-primary);
+}
+
+.track-shipment__helper {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--dx-text-muted);
+}
+
+.track-shipment__highlights {
+  display: grid;
+  gap: var(--dx-spacing-xs);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.track-shipment__meta {
+  display: grid;
+  gap: var(--dx-spacing-xs);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.track-shipment__meta-label {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(12, 31, 67, 0.55);
+  font-weight: 600;
+}
+
+.track-shipment__meta-value {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dx-text-primary);
+}
+
+.track-shipment__progress {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.track-shipment__progress-step {
+  padding: 0.65rem 0.8rem;
+  border-radius: var(--dx-radius-md);
+  border: 1px solid var(--dx-color-border);
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--dx-text-muted);
+}
+
+.track-shipment__progress-step--active {
+  border-color: rgba(14, 165, 233, 0.4);
+  background: rgba(14, 165, 233, 0.14);
+  color: var(--dx-color-primary-dark);
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.18);
+}
+
+.track-shipment__timeline {
+  display: grid;
+  gap: var(--dx-spacing-sm);
+}
+
+.track-shipment__timeline h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dx-text-primary);
+}
+
+.track-shipment__timeline ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  position: relative;
+}
+
+.track-shipment__timeline ol::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  background: rgba(12, 31, 67, 0.1);
+}
+
+.track-shipment__timeline-item {
+  display: grid;
+  grid-template-columns: 1.2rem 1fr;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.track-shipment__timeline-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--dx-color-primary), var(--dx-color-primary-dark));
+  margin-top: 0.35rem;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+.track-shipment__timeline-content {
+  border-radius: var(--dx-radius-md);
+  border: 1px solid var(--dx-color-border);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.85rem 1rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.track-shipment__timeline-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.track-shipment__timeline-date {
+  font-size: 0.8rem;
+  color: var(--dx-text-muted);
+}
+
+.track-shipment__empty--notice {
+  text-align: center;
+  font-weight: 600;
+  color: var(--dx-text-muted);
+}
+
+.track-shipment__timeline-comment {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--dx-text-primary);
+}
+
+.track-shipment__empty {
+  text-align: center;
+  padding: var(--dx-spacing-lg);
+  border-radius: var(--dx-radius-md);
+  border: 1px dashed var(--dx-color-border-strong);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--dx-text-muted);
+  font-size: 0.95rem;
+}

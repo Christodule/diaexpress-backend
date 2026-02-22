@@ -1,0 +1,13 @@
+export { default as DiaexpressLanding } from './DiaexpressLanding';
+export { default as HeroSection } from './HeroSection';
+export { default as BannerSection } from './BannerSection';
+export { default as LocationSection } from './LocationSection';
+export { default as FeaturesSection } from './FeaturesSection';
+export { default as ServicesSection } from './ServicesSection';
+export { default as WhyChooseUsSection } from './WhyChooseUsSection';
+export { default as TransportOptionsSection } from './TransportOptionsSection';
+export { default as TestimonialsSection } from './TestimonialsSection';
+export { default as ContactSection } from './ContactSection';
+export { default as Search } from './Search';
+export { default as ArrowRight } from './ArrowRight';
+export { default as ChevronRight } from './ChevronRight';

@@ -1,0 +1,201 @@
+.profile-addresses {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-addresses header {
+  margin-bottom: 2rem;
+}
+
+.profile-addresses header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.alert.error {
+  background: #fdecea;
+  color: #c62828;
+  border-left: 4px solid #c62828;
+}
+
+.alert.info {
+  background: #e3f2fd;
+  color: #1565c0;
+  border-left: 4px solid #1565c0;
+}
+
+.address-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 3rem;
+}
+
+.address-column h2 {
+  margin-bottom: 0.75rem;
+}
+
+.address-card {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.address-card h3 {
+  margin: 0 0 0.4rem 0;
+}
+
+.address-card p {
+  margin: 0.15rem 0;
+}
+
+.address-card .notes {
+  font-style: italic;
+  color: #555;
+}
+
+.address-card .gps {
+  margin-top: 0.35rem;
+  color: #1565c0;
+  font-size: 0.9rem;
+}
+
+.address-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.address-card-actions button {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: #1976d2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.address-card-actions button.danger {
+  background: #d32f2f;
+}
+
+.address-card-actions button:hover {
+  opacity: 0.9;
+}
+
+.empty {
+  color: #666;
+  font-style: italic;
+}
+
+.address-form-wrapper {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.address-form .form-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.address-form label {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.geo-section {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.geo-section h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.geo-hint {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.address-form input,
+.address-form select,
+.address-form textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.address-form textarea {
+  resize: vertical;
+}
+
+.field-error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-actions button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-actions button.secondary {
+  background: #9e9e9e;
+}
+
+.form-actions button:disabled {
+  background: #90caf9;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .address-card {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

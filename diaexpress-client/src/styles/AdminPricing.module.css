@@ -1,0 +1,222 @@
+.adminPricing {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.adminPricing h2, .adminPricing h3, .adminPricing h4 {
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.pricingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.pricingForm input,
+.pricingForm select,
+.pricingForm button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.pricingForm input:disabled {
+  background: #eee;
+  color: #666;
+}
+
+.pricingForm button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pricingForm button:hover {
+  background-color: #0056b3;
+}
+
+.pricingAlert {
+  background: #fdecea;
+  color: #b71c1c;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #b71c1c;
+  margin: 0.75rem 0 1rem;
+}
+
+.addressSelectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.pricingFormHint {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.rangeTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+}
+
+.rangeTable th,
+.rangeTable td {
+  border: 1px solid #ddd;
+  padding: 0.4rem;
+  text-align: center;
+}
+
+.rangeTable input {
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.rangeTable button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.packagePriceRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.packagePriceRow select,
+.packagePriceRow input {
+  flex: 1;
+}
+
+.packagePriceRow button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.transportBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px dashed #ccc;
+  border-radius: 6px;
+  background-color: #fdfdfd;
+}
+
+.containerPriceRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.containerPriceRow input {
+  flex: 1;
+}
+
+.savedTransport {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.delete {
+  color: red;
+}
+.pricingForm button[type="submit"] {
+  background-color: #28a745;
+}
+
+.pricingForm button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.pricingList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.pricingList li {
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.pricingList button {
+  margin-left: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.pricingList .delete {
+  color: red;
+}
+
+.tagInfo {
+  background: #e7f1ff;
+  color: #004085;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .pricingForm,
+  .rangeTable,
+  .packagePriceRow {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .rangeTable th,
+  .rangeTable td {
+    font-size: 0.75rem;
+    padding: 0.2rem;
+  }
+
+  .packagePriceRow {
+    gap: 0.3rem;
+  }
+
+  .pricingList li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

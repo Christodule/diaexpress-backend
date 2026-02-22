@@ -1,0 +1,29 @@
+{
+  "bookingReference": "CMA123456789",
+  "status": "CONFIRMED",
+  "carrierName": "CMA CGM",
+  "trackingNumber": "CMA-TRACK-987654",
+  "estimatedDelivery": "2024-04-24T10:00:00Z",
+  "origin": {
+    "port": "Le Havre",
+    "country": "FR"
+  },
+  "destination": {
+    "port": "Shanghai",
+    "country": "CN"
+  },
+  "events": [
+    {
+      "code": "BOOKED",
+      "description": "Booking confirmed",
+      "location": "Le Havre",
+      "timestamp": "2024-04-01T08:30:00Z"
+    },
+    {
+      "code": "ETD",
+      "description": "Departure planned",
+      "location": "Le Havre",
+      "timestamp": "2024-04-05T06:00:00Z"
+    }
+  ]
+}

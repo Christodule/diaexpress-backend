@@ -1,0 +1,277 @@
+.adminPricing {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--dx-spacing-xl) var(--dx-spacing-sm);
+  background: var(--dx-gradient-background);
+  font-family: var(--dx-font-family);
+}
+
+.adminPricing h2,
+.adminPricing h3,
+.adminPricing h4 {
+  margin: 0;
+  color: var(--dx-text-primary);
+}
+
+.pricingForm {
+  display: grid;
+  gap: var(--dx-spacing-md);
+  background: #ffffff;
+  padding: var(--dx-spacing-lg);
+  border: 1px solid var(--dx-color-border);
+  border-radius: var(--dx-radius-lg);
+  box-shadow: var(--dx-shadow-card);
+}
+
+.pricingForm input,
+.pricingForm select,
+.pricingForm button {
+  font-family: inherit;
+}
+
+.pricingForm input,
+.pricingForm select {
+  border: 1px solid var(--dx-color-border);
+  border-radius: var(--dx-radius-sm);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  background: #fff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  color: var(--dx-text-primary);
+}
+
+.pricingForm input:focus,
+.pricingForm select:focus {
+  outline: none;
+  border-color: var(--dx-color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.12);
+}
+
+.pricingForm input:disabled {
+  background: #f1f5f9;
+  color: var(--dx-text-soft);
+}
+
+.pricingForm button {
+  background: linear-gradient(135deg, var(--dx-color-primary), var(--dx-color-primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--dx-shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricingForm button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--dx-shadow-hover);
+}
+
+.pricingForm button[type="submit"] {
+  background: linear-gradient(135deg, #16a34a, #0f9d58);
+}
+
+.pricingForm button[type="submit"]:hover {
+  box-shadow: 0 20px 40px rgba(15, 157, 88, 0.28);
+}
+
+.pricingAlert,
+.pricingSuccess {
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--dx-radius-md);
+  border: 1px solid var(--dx-color-border);
+  box-shadow: var(--dx-shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.pricingAlert {
+  background: var(--dx-error-surface);
+  color: #9b1c1c;
+  border-left: 4px solid #ef4444;
+}
+
+.pricingSuccess {
+  background: var(--dx-success-surface);
+  color: #166534;
+  border-left: 4px solid #16a34a;
+}
+
+.addressSelectGroup {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.pricingFormHint {
+  font-size: 0.85rem;
+  color: var(--dx-text-soft);
+}
+
+.rangeTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  background: #fff;
+  border-radius: var(--dx-radius-md);
+  overflow: hidden;
+  box-shadow: var(--dx-shadow-sm);
+}
+
+.rangeTable th,
+.rangeTable td {
+  border: 1px solid var(--dx-color-border);
+  padding: 0.65rem;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+.rangeTable thead {
+  background: rgba(12, 31, 67, 0.05);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.rangeTable input {
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  border-radius: var(--dx-radius-sm);
+  border: 1px solid var(--dx-color-border);
+}
+
+.rangeTable button {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--dx-radius-sm);
+  cursor: pointer;
+}
+
+.packagePriceRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.6rem;
+  background: rgba(12, 31, 67, 0.03);
+  padding: 0.75rem;
+  border-radius: var(--dx-radius-md);
+}
+
+.packagePriceRow select,
+.packagePriceRow input {
+  width: 100%;
+}
+
+.packagePriceRow button {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--dx-radius-sm);
+  cursor: pointer;
+}
+
+.transportBlock {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--dx-color-border);
+  border-radius: var(--dx-radius-md);
+  background: rgba(0, 123, 255, 0.03);
+}
+
+.containerPriceRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.containerPriceRow input {
+  width: 100%;
+}
+
+.savedTransport {
+  display: grid;
+  gap: 0.35rem;
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: var(--dx-radius-md);
+  border: 1px solid var(--dx-color-border);
+  box-shadow: var(--dx-shadow-sm);
+}
+
+.delete {
+  color: #b91c1c;
+}
+
+.pricingList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pricingList li {
+  background: #fff;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--dx-color-border);
+  border-radius: var(--dx-radius-lg);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  box-shadow: var(--dx-shadow-sm);
+}
+
+.pricingList button {
+  margin-left: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.pricingList .delete {
+  color: #b91c1c;
+}
+
+.tagInfo {
+  background: #e7f1ff;
+  color: #004085;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .pricingForm {
+    padding: var(--dx-spacing-md);
+  }
+
+  .rangeTable th,
+  .rangeTable td {
+    font-size: 0.78rem;
+    padding: 0.35rem;
+  }
+
+  .packagePriceRow,
+  .containerPriceRow {
+    grid-template-columns: 1fr;
+  }
+
+  .pricingList li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(15, 64, 135, 0.35)" />
+      <stop offset="100%" stop-color="rgba(12, 46, 102, 0.7)" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#footerGradient)" d="M0,288L60,266.7C120,245,240,203,360,181.3C480,160,600,160,720,181.3C840,203,960,245,1080,240C1200,235,1320,181,1380,154.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" />
+</svg>

@@ -1,0 +1,30 @@
+{
+  "transactionId": "fedex-demo-transaction",
+  "output": {
+    "shipmentId": "FDX123456789",
+    "masterTrackingNumber": "449044304137821",
+    "status": "SUCCESS",
+    "serviceType": "INTERNATIONAL_PRIORITY",
+    "estimatedDelivery": "2024-04-20T16:00:00Z",
+    "events": [
+      {
+        "eventType": "PROCESSED",
+        "eventDescription": "Shipment information sent to FedEx",
+        "location": {
+          "city": "Paris",
+          "countryCode": "FR"
+        },
+        "timestamp": "2024-04-02T08:15:00Z"
+      },
+      {
+        "eventType": "PICKED_UP",
+        "eventDescription": "Package picked up",
+        "location": {
+          "city": "Paris",
+          "countryCode": "FR"
+        },
+        "timestamp": "2024-04-02T11:45:00Z"
+      }
+    ]
+  }
+}

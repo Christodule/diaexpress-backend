@@ -1,0 +1,25 @@
+{
+  "trackingNumber": "CMA-TRACK-987654",
+  "status": "IN_TRANSIT",
+  "estimatedDelivery": "2024-04-24T10:00:00Z",
+  "events": [
+    {
+      "code": "DEP",
+      "description": "Departed origin port",
+      "location": "Le Havre",
+      "timestamp": "2024-04-06T12:00:00Z"
+    },
+    {
+      "code": "CUST",
+      "description": "Customs cleared",
+      "location": "Suez Canal",
+      "timestamp": "2024-04-15T09:15:00Z"
+    },
+    {
+      "code": "ARR",
+      "description": "Arrived destination port",
+      "location": "Shanghai",
+      "timestamp": "2024-04-22T18:45:00Z"
+    }
+  ]
+}

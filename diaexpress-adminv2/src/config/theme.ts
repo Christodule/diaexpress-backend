@@ -1,0 +1,41 @@
+export const calmOpsTheme = {
+  colors: {
+    background: '#f5f7fb',
+    surface: '#ffffff',
+    surfaceAlt: '#f0f3f9',
+    surfaceRaised: '#e8edf6',
+    text: '#101828',
+    textMuted: '#5d6b82',
+    primary: '#3f6ae0',
+    primarySoft: '#dbe6ff',
+    accent: '#2b8c92',
+    border: 'rgba(16, 24, 40, 0.08)',
+    success: '#20b570',
+    warning: '#d99336',
+    danger: '#e0554f',
+    info: '#4f8ff2',
+  },
+  radius: {
+    sm: '10px',
+    md: '14px',
+    lg: '18px',
+  },
+  shadow: {
+    sm: '0 6px 18px rgba(15, 23, 42, 0.08)',
+    md: '0 16px 40px rgba(15, 23, 42, 0.12)',
+  },
+  spacing: {
+    xs: '4px',
+    sm: '8px',
+    md: '12px',
+    lg: '16px',
+    xl: '24px',
+    xxl: '32px',
+  },
+  typography: {
+    fontFamily: "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    title: '22px',
+    body: '14px',
+    small: '12px',
+  },
+};

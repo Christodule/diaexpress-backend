@@ -1,0 +1,152 @@
+const Reservation = require("../models/Reservation");
+const Pricing = require("../models/Pricing");
+const { ensureRequestIdentity } = require("../services/diaexpressAuthService");
+const { syncUserFromIdentity } = require("../services/userIdentityService");
+
+function normaliseTransportType(value) {
+  if (typeof value !== "string") {
+    return undefined;
+  }
+  const trimmed = value.trim();
+  return trimmed.length ? trimmed.toLowerCase() : undefined;
+}
+
+function equalsObjectId(left, right) {
+  if (!left || !right) {
+    return false;
+  }
+  if (typeof left.equals === "function") {
+    return left.equals(right);
+  }
+  if (typeof right.equals === "function") {
+    return right.equals(left);
+  }
+  return String(left) === String(right);
+}
+
+async function resolveAuthenticatedUser(req) {
+  if (req.dbUser) {
+    return req.dbUser;
+  }
+
+  const identity = ensureRequestIdentity(req);
+  if (!identity) {
+    return null;
+  }
+
+  const user = await syncUserFromIdentity(identity);
+  if (user) {
+    req.dbUser = user;
+  }
+
+  return user;
+}
+
+exports.createReservation = async (req, res) => {
+  try {
+    const { origin, destination } = req.body;
+    const transportType = normaliseTransportType(req.body.transportType);
+
+    const currentUser = await resolveAuthenticatedUser(req);
+    if (!currentUser) {
+      return res.status(401).json({ message: "Utilisateur non authentifié" });
+    }
+
+    const pricing = await Pricing.findOne({
+      origin,
+      destination,
+      ...(transportType && {
+        transportPrices: { $elemMatch: { transportType } },
+      }),
+    });
+    if (!pricing) {
+      return res.status(400).json({
+        message: "Aucun tarif trouvé pour cette origine/destination/transport.",
+      });
+    }
+
+    const payload = { ...req.body, user: currentUser._id };
+    delete payload.client;
+
+    const reservation = new Reservation(payload);
+
+    await reservation.save();
+    res.status(201).json(reservation);
+  } catch (err) {
+    res.status(500).json({ message: "Erreur création réservation", error: err.message });
+  }
+};
+// ✅ Voir mes réservations
+exports.getMyReservations = async (req, res) => {
+  try {
+    const currentUser = await resolveAuthenticatedUser(req);
+    if (!currentUser) {
+      return res.status(401).json({ message: "Utilisateur non authentifié" });
+    }
+
+    const reservations = await Reservation.find({ user: currentUser._id }).sort({ createdAt: -1 });
+    res.json(reservations);
+  } catch (err) {
+    res.status(500).json({ message: "Erreur serveur" });
+  }
+};
+
+// ✅ Voir toutes les réservations (admin)
+exports.getAllReservations = async (req, res) => {
+  try {
+    const reservations = await Reservation.find().populate("user", "email role").sort({ createdAt: -1 });
+    res.json(reservations);
+  } catch (err) {
+    res.status(500).json({ message: "Erreur serveur" });
+  }
+};
+
+// ✅ Mettre à jour le statut
+exports.updateStatus = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status, trackingNumber } = req.body;
+
+    const reservation = await Reservation.findById(id);
+    if (!reservation) return res.status(404).json({ message: "Réservation non trouvée" });
+
+    if (status) reservation.status = status;
+    if (trackingNumber) reservation.trackingNumber = trackingNumber;
+
+    await reservation.save();
+    res.json(reservation);
+  } catch (err) {
+    res.status(500).json({ message: "Erreur serveur" });
+  }
+};
+
+// ✅ Upload document
+exports.uploadDocument = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { type, url } = req.body;
+
+    if (!type || !url) return res.status(400).json({ message: "Type et URL requis" });
+
+    const reservation = await Reservation.findById(id);
+    if (!reservation) return res.status(404).json({ message: "Réservation non trouvée" });
+
+    const currentUser = await resolveAuthenticatedUser(req);
+    if (!currentUser) {
+      return res.status(401).json({ message: "Utilisateur non authentifié" });
+    }
+
+    const isAdmin = currentUser.role === "admin";
+    const isOwner = equalsObjectId(reservation.user, currentUser._id);
+    if (!isAdmin && !isOwner) {
+      return res.status(403).json({ message: "Accès non autorisé" });
+    }
+
+    reservation.documents.push({ type, url });
+    await reservation.save();
+
+    res.json(reservation);
+  } catch (err) {
+    res.status(500).json({ message: "Erreur serveur" });
+  }
+};

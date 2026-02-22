@@ -1,0 +1,22 @@
+{
+  "tokens": [
+    {
+      "token": "sandbox-client-token",
+      "subject": "sandbox-client",
+      "type": "user",
+      "roles": ["client"],
+      "scopes": ["quotes:read", "quotes:write", "shipments:read"],
+      "email": "sandbox-client@diaexpress.test",
+      "label": "Sandbox Client"
+    },
+    {
+      "token": "sandbox-admin-token",
+      "subject": "sandbox-admin",
+      "type": "admin",
+      "roles": ["admin"],
+      "scopes": ["*"] ,
+      "email": "sandbox-admin@diaexpress.test",
+      "label": "Sandbox Admin"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "offerId": "SAMPLE-OFFER-001",
+  "origin": "FOS",
+  "destination": "DLA",
+  "transportMode": "SEA",
+  "totalPrice": 865.5,
+  "currency": "USD",
+  "tariffName": "Sandbox Spot",
+  "transitTime": "14D",
+  "validUntil": "2024-12-31T23:59:59Z"
+}

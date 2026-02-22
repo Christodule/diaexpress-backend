@@ -1,0 +1,40 @@
+{
+  "transactionId": "fedex-demo-tracking",
+  "output": {
+    "completeTrackResults": [
+      {
+        "trackingNumber": "449044304137821",
+        "trackResults": [
+          {
+            "latestStatus": {
+              "statusByLocale": "En transit"
+            },
+            "estimatedDeliveryTime": "2024-04-20T16:00:00Z",
+            "scanEvents": [
+              {
+                "eventType": "AR",
+                "eventDescription": "At local FedEx facility",
+                "scanLocation": {
+                  "city": "Roissy",
+                  "countryCode": "FR"
+                },
+                "date": "2024-04-03",
+                "time": "09:12:00"
+              },
+              {
+                "eventType": "IT",
+                "eventDescription": "International shipment release",
+                "scanLocation": {
+                  "city": "Memphis",
+                  "countryCode": "US"
+                },
+                "date": "2024-04-05",
+                "time": "21:50:00"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

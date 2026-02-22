@@ -1,0 +1,26 @@
+.admin-quotes {
+  padding: 2rem;
+  background: #fff;
+}
+
+.error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.quotes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.quotes-table th,
+.quotes-table td {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.quotes-table th {
+  background-color: #f8f8f8;
+}
